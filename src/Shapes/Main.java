@@ -3,7 +3,7 @@ package Shapes;
 public class Main {
 
     public static void main(String[] args) {
-        
+
         Shape circle = new Circle(5);
         circle.calculateArea();
         circle.printInfo();
@@ -22,16 +22,9 @@ public class Main {
         shapes[1] = square;
         shapes[2] = triangle;
 
-        double totalArea = calculateTotalArea(shapes);
-        System.out.println("Total area of all shapes: " + totalArea);
+        double totalArea = CalculateAreaService.calculateTotalArea(shapes);
+        System.out.println("The total area of all shapes: " + totalArea);
 
     }
 
-    static public double calculateTotalArea(Shape[] shapes) {
-        double totalArea = 0;
-        for (Shape shape : shapes) {
-            totalArea += shape.calculateArea();
-        }
-        return totalArea;
-    }
 }
